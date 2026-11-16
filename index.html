@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flashcards</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand">Flashcards</div>
+        <button class="button button--primary" type="button">New Deck</button>
+      </header>
+
+      <div class="layout">
+        <aside class="sidebar">
+          <nav class="deck-nav" aria-label="Decks">
+            <ul class="deck-list">
+              <li class="deck-list__item-wrapper">
+                <button class="deck-list__item is-active" type="button" aria-current="true">Spanish Basics</button>
+              </li>
+              <li class="deck-list__item-wrapper">
+                <button class="deck-list__item" type="button">Biology Terms</button>
+              </li>
+              <li class="deck-list__item-wrapper">
+                <button class="deck-list__item" type="button">World Capitals</button>
+              </li>
+              <li class="deck-list__item-wrapper">
+                <button class="deck-list__item" type="button">History Dates</button>
+              </li>
+            </ul>
+          </nav>
+        </aside>
+
+        <main class="main-panel">
+          <header class="deck-header">
+            <h1 class="deck-title">Spanish Basics</h1>
+          </header>
+
+          <section class="toolbar" aria-label="Card tools">
+            <div class="toolbar__search">
+              <label class="toolbar__label" for="card-search">Search</label>
+              <input id="card-search" class="toolbar__input" type="search" placeholder="Search cards" />
+            </div>
+
+            <div class="toolbar__actions">
+              <button class="button button--secondary" type="button">Shuffle</button>
+              <button class="button button--primary" type="button">New Card</button>
+            </div>
+          </section>
+
+          <section class="card-area" aria-live="polite">
+            <article class="flashcard" aria-label="Current flashcard">
+              <p class="flashcard__label">Front</p>
+              <h2 class="flashcard__question">¿Cómo se dice “hello” en español?</h2>
+            </article>
+          </section>
+
+          <div class="card-controls" role="group" aria-label="Card navigation">
+            <button class="button button--ghost" type="button">Previous</button>
+            <button class="button button--secondary" type="button">Flip</button>
+            <button class="button button--ghost" type="button">Next</button>
+          </div>
+        </main>
+      </div>
+
+      <footer class="app-footer">
+        <p>Tip: search to filter cards, flip to reveal the answer, and shuffle to review in a fresh order.</p>
+      </footer>
+    </div>
+  </body>
+</html>
